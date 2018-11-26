@@ -1,20 +1,23 @@
 {
-  "manifest_version": 2,
-  "name": "QRCode",
-  "version": "1.0",
-  "description": "简单的二维码生成器",
-  "icons": {
-      "16": "images/icon16.png",
-      "32": "images/icon32.png",
-      "128": "images/icon128.png"
-  },
-  "browser_action": {
-      "default_popup": "popup.html",
-      "default_title": "QRCode",
-      "default_icon": {
-          "16": "images/icon16.png",
-          "128": "images/icon128.png"
-      }
-  },
-  "permissions": ["tabs"]
+    "manifest_version": 2,
+    "name": "简单的个人插件",
+    "version": "1.0",
+    "description": "二维码生成器和右键搜索地址",
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon32.png",
+        "128": "images/icon128.png"
+    },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "自定义的插件",
+        "default_icon": {
+            "16": "images/icon16.png",
+            "128": "images/icon128.png"
+        }
+    },
+    "background": { 
+        "scripts": ["js/menu.js"] 
+    },
+    "permissions": ["tabs","contextMenus"]
 }
