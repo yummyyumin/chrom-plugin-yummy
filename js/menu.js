@@ -5,7 +5,6 @@ function searchAddress(info){
     alert(searchcode);
     var newURL = "https://www.google.cn/maps/search/"+searchcode+"?hl=zh-CN&source=opensearch";
     chrome.tabs.create({ url: newURL });
-    // window.open("yoururl");
 }
 
 chrome.contextMenus.create(
