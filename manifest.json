@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "name": "简单的个人插件",
+    "name": "简单的个人扩展",
     "version": "1.0",
     "description": "二维码生成器和右键搜索地址",
     "icons": {
@@ -10,7 +10,7 @@
     },
     "browser_action": {
         "default_popup": "popup.html",
-        "default_title": "自定义的插件",
+        "default_title": "自定义的扩展",
         "default_icon": {
             "16": "images/icon16.png",
             "128": "images/icon128.png"
@@ -19,5 +19,13 @@
     "background": { 
         "scripts": ["js/menu.js"] 
     },
-    "permissions": ["tabs","contextMenus"]
+    "content_scripts":[
+        {
+            "matches": ["<all_urls>"],
+            "js": ["./js/test.js"],
+            "css": ["./css/add.css"],
+            "run_at": "document_start"
+        }
+    ],
+    "permissions": ["tabs","contextMenus","http://*/*","https://*/*"]
 }
