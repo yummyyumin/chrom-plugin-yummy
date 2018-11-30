@@ -22,8 +22,8 @@
     "content_scripts":[
         {
             "matches": ["<all_urls>"],
-            "js": ["./js/test.js"],
-            "css": ["./css/add.css"],
+            "js": ["js/test.js"],
+            "css": ["css/add.css"],
             "run_at": "document_start"
         }
     ],
